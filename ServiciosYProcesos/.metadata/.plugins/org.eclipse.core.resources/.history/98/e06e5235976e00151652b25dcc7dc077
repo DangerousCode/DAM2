@@ -1,0 +1,11 @@
+package main;
+import hilos.Hilo;
+public class Main {
+
+	public static void main(int args) {
+		if(args%2==0){
+			Hilo hilo=new Hilo(1,args);
+		}
+	}
+
+}

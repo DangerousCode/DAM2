@@ -1,0 +1,28 @@
+package main;
+import hilos.Hilo;
+public class Main {
+
+	public static void main(int args) {
+		int hilos=20;
+		int numeros=0;
+		int mod=0;
+		while(hilos>0){
+			if(args%hilos==0){
+				numeros=args/hilos;
+				break;
+			}
+			hilos--;
+		}
+		Hilo[] hilo=new Hilo[hilos];
+		Suma suma=new Suma();
+		if(hilos!=1){
+			for(int j=0;j<hilos;j++){
+				hilo[j]=new Hilo(numeros);
+			}
+			for(int k=0;k<hilos;k++){
+				hilo[k].start();
+			}
+		}
+	}
+
+}

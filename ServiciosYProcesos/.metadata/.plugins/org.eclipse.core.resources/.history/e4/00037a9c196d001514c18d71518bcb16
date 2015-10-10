@@ -1,0 +1,29 @@
+package Main;
+
+public class Main extends Thread{
+	public static void main(String[] args) throws InterruptedException{
+		
+		Hilo hilo1=new Hilo(1);
+		Hilo hilo2=new Hilo(2);
+		Hilo hilo3=new Hilo(3);
+		Hilo hilo4=new Hilo(4);
+		
+		hilo1.start();
+		hilo2.start();
+		hilo3.start();
+		hilo4.start();
+		
+		hilo1.join();
+		hilo2.join();
+		hilo3.join();
+		hilo3.join();
+		
+		Resultados resultado=new Resultados();
+		
+		System.out.println("La suma de numeros naturales es: "+resultado.suma);
+		System.out.println("La multiplicacion de numeros naturales es: "+resultado.multiplica);
+		System.out.println("La suma de pares es: "+resultado.pares);
+		System.out.println("La suma de impares es: "+resultado.impares);
+		
+	}
+}
