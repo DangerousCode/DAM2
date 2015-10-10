@@ -1,14 +1,11 @@
 package calculos;
 
 public class Suma {
-	int sumacomp=0;
-	public Suma(){
+	int sumatotal=0;
+	Suma(){
 		
 	}
-	public void sumaTotal(int sumatotal){
-		sumacomp+=sumatotal;
-	}
-	public int getSumacomp(){
-		return sumacomp;
+	public void sumarNumerosHilos(int sumanum){
+		sumatotal=sumatotal+sumanum;
 	}
 }
