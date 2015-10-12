@@ -1,6 +1,7 @@
 package temaUnoSerializacion;
+import java.io.*;
 
-public class Persona {
+public class Persona implements Serializable{
 	String nombre;
 	String apellidos;
 	String DNI;

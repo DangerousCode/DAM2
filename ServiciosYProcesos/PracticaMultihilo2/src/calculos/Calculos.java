@@ -3,10 +3,11 @@ package calculos;
 
 public class Calculos {
 	public static void main(String[] args) throws InterruptedException{
-		int parametro=21;
+		int parametro=40;
 		int hilos=20;
 		int veces=0;
 		boolean primo=true;
+		Ventanas ventana=new Ventanas("Calculo");
 		//Mientras los hilos sean mayores que
 		//uno el bucle se mantendra
 		while(hilos>1){
@@ -37,7 +38,7 @@ public class Calculos {
 		
 		Suma sumatotal=new Suma();
 		if(hilos==1 || primo){
-			Hilo hilo=new Hilo(parametro,sumatotal,parametro);
+			Hilo hilo=new Hilo(parametro,sumatotal,parametro,"Hilo1");
 			System.out.println("La cantidad de hilos utilizada es: 1\n");
 			hilo.start();
 			hilo.join();
@@ -48,7 +49,7 @@ public class Calculos {
 			Hilo[] hilo=new Hilo[hilos];
 			
 			for(int i=0;i<hilos;i++){
-				hilo[i]=new Hilo(veces, sumatotal, parametro);
+				hilo[i]=new Hilo(veces, sumatotal, parametro,"Hilo"+(i+1));
 				//Se resta veces a parametro para indicar al siguiente hilo desde donde
 				//debe continuar sumando numeros.
 				parametro=parametro-veces;
@@ -60,7 +61,7 @@ public class Calculos {
 			for(int i=0;i<hilos;i++){
 				hilo[i].join();
 			}
-			System.out.println("La suma total es: "+sumatotal.sumatotal);
+			ventana.escribecadena("La suma total es: "+sumatotal.sumatotal);
 		}
 		
 		

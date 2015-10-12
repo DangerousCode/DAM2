@@ -19,7 +19,7 @@ public class Metodos1 implements Serializable{
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		HashMap<String,Persona> hm=new HashMap<String,Persona>();
 		
-		for(int i=0;i<=LONGITUD;i++){
+		for(int i=0;i<DNI.length;i++){
 			System.out.print("Introduce nombre: ");
 			nombre=br.readLine();
 			System.out.print("Introduce apellidos: ");
@@ -35,11 +35,13 @@ public class Metodos1 implements Serializable{
 	}
 	
 	public static void serializar()throws IOException,FileNotFoundException{
-		ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("C:\\Users\\AlumnoT\\Desktop\\Ejercicio1.obj"));
+		ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("C:\\Users\\Alvaro\\Desktop\\Ejercicio1.obj"));
 		Herramientas.serializarObject(Metodos1.inicio(), oos);
+		oos.close();
 	}
 	public static void desserializar() throws IOException,FileNotFoundException,ClassNotFoundException{
-		ObjectInputStream ois=new ObjectInputStream(new FileInputStream("C:\\Users\\AlumnoT\\Desktop\\Ejercicio1.obj"));
+		ObjectInputStream ois=new ObjectInputStream(new FileInputStream("C:\\Users\\Alvaro\\Desktop\\Ejercicio1.obj"));
 		Herramientas.desserializarMap(ois);
+		ois.close();
 	}
 }
