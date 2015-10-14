@@ -3,7 +3,7 @@ package calculos;
 
 public class Calculos {
 	public static void main(String[] args) throws InterruptedException{
-		int parametro=40;
+		int parametro=56;
 		int hilos=20;
 		int veces=0;
 		boolean primo=true;
@@ -42,7 +42,6 @@ public class Calculos {
 			System.out.println("La cantidad de hilos utilizada es: 1\n");
 			hilo.start();
 			hilo.join();
-			System.out.println("La suma total es: "+sumatotal.sumatotal);
 		}
 		
 		else{

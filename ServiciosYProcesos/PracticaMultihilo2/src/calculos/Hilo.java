@@ -22,7 +22,7 @@ public class Hilo extends Thread{
 			parametro--;
 			ventana.escribecadena("Valor actual de la suma del "+nombre+" : "+sumanum+"\n");
 		}
-		ventana.escribecadena("\nLa suma del hilo es: "+sumanum);
+		ventana.escribecadena("\nLa suma del "+nombre+" es: "+sumanum);
 		sumatotal.sumarNumerosHilos(sumanum);
 	}
 }
