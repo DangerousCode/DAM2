@@ -1,0 +1,18 @@
+package interfaz;
+import java.awt.*;
+public class Gui extends Frame{
+	Button b1,b2,b3;
+	
+	Gui(){
+		setTitle("Titulo de la ventana");
+		setLayout(new FlowLayout());
+		setSize(400,200);
+		setVisible(true);
+		b1=new Button("Aceptar");
+		b2=new Button("Cancelar");
+		b3=new Button("Salir");
+		add(b1);
+		add(b2);
+		add(b3);
+	}
+}
