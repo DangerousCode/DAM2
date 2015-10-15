@@ -103,6 +103,22 @@ public class Herramientas {
         	entrada.close();
         }
         
+        public static void leerObjetos(ObjectInputStream leer) throws IOException, ClassNotFoundException {
+            try {
+                while (true) {
+                    Object c = (Object) leer.readObject();
+                    System.out.println(c);
+                }
+            } catch (EOFException ex) {
+                // tratamiento de Accion (-pintar pantalla -guardar en una coleccion -guardar en un Map -guardar fichero
+                System.out.println("Final de fichero");
+            } finally {
+                if (leer != null) {
+                    leer.close();
+                }
+            }
+        }
+        
         public static void desserializarMap(ObjectInputStream l)throws IOException, ClassNotFoundException{
         	Map m=null;
         	try{
@@ -118,4 +134,6 @@ public class Herramientas {
         		}
         	}
         }
+        
+        
 }
