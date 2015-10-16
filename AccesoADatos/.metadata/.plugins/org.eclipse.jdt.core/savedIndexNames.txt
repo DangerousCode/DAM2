@@ -10,11 +10,9 @@ INDEX VERSION 1.127+C:\Users\Alumnot\Documents\GitHub\DAM2\AccesoADatos\.metadat
 2664259167.index
 3432182766.index
 2674475739.index
-4262030584.index
 3916428639.index
 4097832164.index
 4070956152.index
-1925728901.index
 1524953806.index
 2591297871.index
 766596693.index
