@@ -1,4 +1,5 @@
 import java.io.*;
+//IMPORTANTE: CAMBIAR EL USUARIO DEL EQUIPO EN CADA RUTA. TANTO EN EL .bat COMO EN ESTE CODIGO.
 public class Procesos {
 
 	public static void main(String[] args) throws IOException, InterruptedException{
