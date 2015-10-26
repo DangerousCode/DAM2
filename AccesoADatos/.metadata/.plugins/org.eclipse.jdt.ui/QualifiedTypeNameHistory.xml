@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="temaUnoSerializacion.Metodos1"/>
 <fullyQualifiedTypeName name="herramientas.Herramientas"/>
+<fullyQualifiedTypeName name="org.jdom2.output.XMLOutputter"/>
 </qualifiedTypeNameHistroy>
