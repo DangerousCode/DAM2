@@ -314,6 +314,10 @@ public class Interface extends JFrame {
 		JButton btnAsterisco = new JButton("*");
 		btnAsterisco.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnAsterisco.getText();
+				textField.setText(string);
 			}
 		});
 		GridBagConstraints gbc_btnAsterisco = new GridBagConstraints();
@@ -327,6 +331,9 @@ public class Interface extends JFrame {
 		JButton btnIgual = new JButton("=");
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String string;
+				string=textField.getText();
+				
 			}
 		});
 		GridBagConstraints gbc_btnIgual = new GridBagConstraints();
