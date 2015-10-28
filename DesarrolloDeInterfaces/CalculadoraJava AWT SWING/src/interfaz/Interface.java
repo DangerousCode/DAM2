@@ -19,11 +19,16 @@ import java.awt.Insets;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.script.*;
+import java.awt.Font;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class Interface extends JFrame {
 	
 	private JPanel contentPane;
 	private JTextField textField;
+	
+	private int memory;
 
 	/**
 	 * Launch the application.
@@ -46,12 +51,13 @@ public class Interface extends JFrame {
 	 */
 	public Interface() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 347, 269);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		textField.setColumns(10);
 		
 		JPanel panel = new JPanel();
@@ -60,11 +66,11 @@ public class Interface extends JFrame {
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(5)
-					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 414, GroupLayout.PREFERRED_SIZE)
-					.addGap(5))
+					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 304, GroupLayout.PREFERRED_SIZE)
+					.addGap(0))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
@@ -72,15 +78,14 @@ public class Interface extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(5)
 					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
-					.addGap(11)
-					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
-					.addContainerGap())
+					.addPreferredGap(ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE))
 		);
 		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[]{39, 40, 0, 0, 89, 0};
-		gbl_panel.rowHeights = new int[]{23, 23, 0, 0, 0, 0};
-		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.columnWidths = new int[]{39, 40, 0, 0, 89, 0, 0};
+		gbl_panel.rowHeights = new int[]{23, 23, 0, 0, 0, 0, 0};
+		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
 		JButton btnUno = new JButton("1");
@@ -109,7 +114,6 @@ public class Interface extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnDos = new GridBagConstraints();
-		gbc_btnDos.anchor = GridBagConstraints.NORTHEAST;
 		gbc_btnDos.insets = new Insets(0, 0, 5, 5);
 		gbc_btnDos.gridx = 1;
 		gbc_btnDos.gridy = 0;
@@ -131,6 +135,29 @@ public class Interface extends JFrame {
 		gbc_btnTres.gridy = 0;
 		panel.add(btnTres, gbc_btnTres);
 		
+		JButton btnCuatro = new JButton("4");
+		btnCuatro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnCuatro.getText();
+				textField.setText(string);
+			}
+		});
+		
+		JButton btnNewButton = new JButton("M+");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				memory=Integer.parseInt(textField.getText());
+			}
+		});
+		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+		gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
+		gbc_btnNewButton.gridx = 3;
+		gbc_btnNewButton.gridy = 0;
+		panel.add(btnNewButton, gbc_btnNewButton);
+		
 		JButton btnMas = new JButton("+");
 		btnMas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -142,21 +169,10 @@ public class Interface extends JFrame {
 		});
 		GridBagConstraints gbc_btnMas = new GridBagConstraints();
 		gbc_btnMas.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnMas.gridwidth = 2;
-		gbc_btnMas.insets = new Insets(0, 0, 5, 0);
-		gbc_btnMas.gridx = 3;
+		gbc_btnMas.insets = new Insets(0, 0, 5, 5);
+		gbc_btnMas.gridx = 4;
 		gbc_btnMas.gridy = 0;
 		panel.add(btnMas, gbc_btnMas);
-		
-		JButton btnCuatro = new JButton("4");
-		btnCuatro.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String string;
-				string = textField.getText();
-				string+=btnCuatro.getText();
-				textField.setText(string);
-			}
-		});
 		GridBagConstraints gbc_btnCuatro = new GridBagConstraints();
 		gbc_btnCuatro.insets = new Insets(0, 0, 5, 5);
 		gbc_btnCuatro.anchor = GridBagConstraints.NORTHWEST;
@@ -194,6 +210,32 @@ public class Interface extends JFrame {
 		gbc_btnSeis.gridy = 1;
 		panel.add(btnSeis, gbc_btnSeis);
 		
+		JButton btnSiete = new JButton("7");
+		btnSiete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnSiete.getText();
+				textField.setText(string);
+			}
+		});
+		
+		JButton btnMemoria = new JButton("M");
+		btnMemoria.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String memoria=""+memory;
+				String string=textField.getText();
+				string+=memoria;
+				textField.setText(string);
+			}
+		});
+		GridBagConstraints gbc_btnMemoria = new GridBagConstraints();
+		gbc_btnMemoria.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnMemoria.insets = new Insets(0, 0, 5, 5);
+		gbc_btnMemoria.gridx = 3;
+		gbc_btnMemoria.gridy = 1;
+		panel.add(btnMemoria, gbc_btnMemoria);
+		
 		JButton btnMenos = new JButton("-");
 		btnMenos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -205,21 +247,10 @@ public class Interface extends JFrame {
 		});
 		GridBagConstraints gbc_btnMenos = new GridBagConstraints();
 		gbc_btnMenos.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnMenos.gridwidth = 2;
-		gbc_btnMenos.insets = new Insets(0, 0, 5, 0);
-		gbc_btnMenos.gridx = 3;
+		gbc_btnMenos.insets = new Insets(0, 0, 5, 5);
+		gbc_btnMenos.gridx = 4;
 		gbc_btnMenos.gridy = 1;
 		panel.add(btnMenos, gbc_btnMenos);
-		
-		JButton btnSiete = new JButton("7");
-		btnSiete.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String string;
-				string = textField.getText();
-				string+=btnSiete.getText();
-				textField.setText(string);
-			}
-		});
 		GridBagConstraints gbc_btnSiete = new GridBagConstraints();
 		gbc_btnSiete.insets = new Insets(0, 0, 5, 5);
 		gbc_btnSiete.gridx = 0;
@@ -256,6 +287,39 @@ public class Interface extends JFrame {
 		gbc_btnNueve.gridy = 2;
 		panel.add(btnNueve, gbc_btnNueve);
 		
+		JButton btnCero = new JButton("0");
+		btnCero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnCero.getText();
+				textField.setText(string);
+			}
+		});
+		
+		JButton btnClear = new JButton("C");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+			}
+		});
+		
+		JButton btnParIz = new JButton("(");
+		btnParIz.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnParIz.getText();
+				textField.setText(string);
+			}
+		});
+		GridBagConstraints gbc_btnParIz = new GridBagConstraints();
+		gbc_btnParIz.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnParIz.insets = new Insets(0, 0, 5, 5);
+		gbc_btnParIz.gridx = 3;
+		gbc_btnParIz.gridy = 2;
+		panel.add(btnParIz, gbc_btnParIz);
+		
 		JButton btnBarra = new JButton("/");
 		btnBarra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -267,49 +331,51 @@ public class Interface extends JFrame {
 		});
 		GridBagConstraints gbc_btnBarra = new GridBagConstraints();
 		gbc_btnBarra.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnBarra.gridwidth = 2;
-		gbc_btnBarra.insets = new Insets(0, 0, 5, 0);
-		gbc_btnBarra.gridx = 3;
+		gbc_btnBarra.insets = new Insets(0, 0, 5, 5);
+		gbc_btnBarra.gridx = 4;
 		gbc_btnBarra.gridy = 2;
 		panel.add(btnBarra, gbc_btnBarra);
-		
-		JButton btnClear = new JButton("C");
-		btnClear.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textField.setText("");
-			}
-		});
 		GridBagConstraints gbc_btnClear = new GridBagConstraints();
 		gbc_btnClear.insets = new Insets(0, 0, 5, 5);
 		gbc_btnClear.gridx = 0;
 		gbc_btnClear.gridy = 3;
 		panel.add(btnClear, gbc_btnClear);
-		
-		JButton btnCero = new JButton("0");
-		btnCero.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String string;
-				string = textField.getText();
-				string+=btnCero.getText();
-				textField.setText(string);
-			}
-		});
 		GridBagConstraints gbc_btnCero = new GridBagConstraints();
 		gbc_btnCero.insets = new Insets(0, 0, 5, 5);
 		gbc_btnCero.gridx = 1;
 		gbc_btnCero.gridy = 3;
 		panel.add(btnCero, gbc_btnCero);
 		
-		JButton btnMemoria = new JButton("M");
-		btnMemoria.addActionListener(new ActionListener() {
+		JButton btnPunto = new JButton(".");
+		btnPunto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnPunto.getText();
+				textField.setText(string);
 			}
 		});
-		GridBagConstraints gbc_btnMemoria = new GridBagConstraints();
-		gbc_btnMemoria.insets = new Insets(0, 0, 5, 5);
-		gbc_btnMemoria.gridx = 2;
-		gbc_btnMemoria.gridy = 3;
-		panel.add(btnMemoria, gbc_btnMemoria);
+		GridBagConstraints gbc_btnPunto = new GridBagConstraints();
+		gbc_btnPunto.insets = new Insets(0, 0, 5, 5);
+		gbc_btnPunto.gridx = 2;
+		gbc_btnPunto.gridy = 3;
+		panel.add(btnPunto, gbc_btnPunto);
+		
+		JButton btnParDer = new JButton(")");
+		btnParDer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnParDer.getText();
+				textField.setText(string);
+			}
+		});
+		GridBagConstraints gbc_btnParDer = new GridBagConstraints();
+		gbc_btnParDer.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnParDer.insets = new Insets(0, 0, 5, 5);
+		gbc_btnParDer.gridx = 3;
+		gbc_btnParDer.gridy = 3;
+		panel.add(btnParDer, gbc_btnParDer);
 		
 		JButton btnAsterisco = new JButton("*");
 		btnAsterisco.addActionListener(new ActionListener() {
@@ -322,23 +388,31 @@ public class Interface extends JFrame {
 		});
 		GridBagConstraints gbc_btnAsterisco = new GridBagConstraints();
 		gbc_btnAsterisco.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnAsterisco.gridwidth = 2;
-		gbc_btnAsterisco.insets = new Insets(0, 0, 5, 0);
-		gbc_btnAsterisco.gridx = 3;
+		gbc_btnAsterisco.insets = new Insets(0, 0, 5, 5);
+		gbc_btnAsterisco.gridx = 4;
 		gbc_btnAsterisco.gridy = 3;
 		panel.add(btnAsterisco, gbc_btnAsterisco);
 		
 		JButton btnIgual = new JButton("=");
 		btnIgual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String string;
-				string=textField.getText();
-				
+				int operacion;
+				String expression=textField.getText();
+				ScriptEngineManager manager = new ScriptEngineManager(); 
+				ScriptEngine engine = manager.getEngineByName("js"); 
+
+				try { 
+				Object result = engine.eval(expression); 
+				textField.setText(""+result); 
+				} catch(ScriptException se) { 
+				System.out.println(se); 
+				} 
 			}
 		});
 		GridBagConstraints gbc_btnIgual = new GridBagConstraints();
+		gbc_btnIgual.insets = new Insets(0, 0, 5, 5);
 		gbc_btnIgual.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnIgual.gridwidth = 5;
+		gbc_btnIgual.gridwidth = 3;
 		gbc_btnIgual.gridx = 0;
 		gbc_btnIgual.gridy = 4;
 		panel.add(btnIgual, gbc_btnIgual);
