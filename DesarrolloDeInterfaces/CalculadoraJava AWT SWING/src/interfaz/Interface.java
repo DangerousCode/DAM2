@@ -22,6 +22,8 @@ import java.awt.event.ActionEvent;
 import javax.script.*;
 import java.awt.Font;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Color;
+import java.awt.SystemColor;
 
 public class Interface extends JFrame {
 	
@@ -51,34 +53,39 @@ public class Interface extends JFrame {
 	 */
 	public Interface() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 347, 269);
+		setBounds(100, 100, 307, 269);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		textField = new JTextField();
+		textField.setForeground(Color.WHITE);
+		textField.setBackground(Color.GRAY);
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		textField.setColumns(10);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(SystemColor.activeCaption);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(5)
-					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 304, GroupLayout.PREFERRED_SIZE)
-					.addGap(0))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(panel, GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(5)
+							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 273, GroupLayout.PREFERRED_SIZE)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 					.addGap(5)
 					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE))
 		);
 		GridBagLayout gbl_panel = new GridBagLayout();
@@ -168,7 +175,6 @@ public class Interface extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnMas = new GridBagConstraints();
-		gbc_btnMas.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnMas.insets = new Insets(0, 0, 5, 5);
 		gbc_btnMas.gridx = 4;
 		gbc_btnMas.gridy = 0;
@@ -246,7 +252,6 @@ public class Interface extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnMenos = new GridBagConstraints();
-		gbc_btnMenos.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnMenos.insets = new Insets(0, 0, 5, 5);
 		gbc_btnMenos.gridx = 4;
 		gbc_btnMenos.gridy = 1;
@@ -330,7 +335,6 @@ public class Interface extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnBarra = new GridBagConstraints();
-		gbc_btnBarra.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnBarra.insets = new Insets(0, 0, 5, 5);
 		gbc_btnBarra.gridx = 4;
 		gbc_btnBarra.gridy = 2;
@@ -387,7 +391,6 @@ public class Interface extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnAsterisco = new GridBagConstraints();
-		gbc_btnAsterisco.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnAsterisco.insets = new Insets(0, 0, 5, 5);
 		gbc_btnAsterisco.gridx = 4;
 		gbc_btnAsterisco.gridy = 3;
@@ -412,10 +415,25 @@ public class Interface extends JFrame {
 		GridBagConstraints gbc_btnIgual = new GridBagConstraints();
 		gbc_btnIgual.insets = new Insets(0, 0, 5, 5);
 		gbc_btnIgual.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnIgual.gridwidth = 3;
+		gbc_btnIgual.gridwidth = 4;
 		gbc_btnIgual.gridx = 0;
 		gbc_btnIgual.gridy = 4;
 		panel.add(btnIgual, gbc_btnIgual);
+		
+		JButton btnPorcentaje = new JButton("%");
+		btnPorcentaje.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String string;
+				string = textField.getText();
+				string+=btnPorcentaje.getText();
+				textField.setText(string);
+			}
+		});
+		GridBagConstraints gbc_btnPorcentaje = new GridBagConstraints();
+		gbc_btnPorcentaje.insets = new Insets(0, 0, 5, 5);
+		gbc_btnPorcentaje.gridx = 4;
+		gbc_btnPorcentaje.gridy = 4;
+		panel.add(btnPorcentaje, gbc_btnPorcentaje);
 		contentPane.setLayout(gl_contentPane);
 	}
 }
