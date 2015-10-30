@@ -21,8 +21,6 @@ public class Ejercicio2 {
 			persianas.setText("De colores");
 			
 			elementos.get(0).addContent(mueble);
-			elementos.get(0).addContent(persianas);
-			elementos.get(1).addContent(mueble);
 			elementos.get(1).addContent(persianas);
 			
 			new XMLOutputter().output(doc,System.out);
