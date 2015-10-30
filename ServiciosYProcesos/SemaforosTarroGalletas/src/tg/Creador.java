@@ -4,26 +4,28 @@ import java.io.InputStreamReader;
 import java.util.concurrent.*;
 import java.io.*;
 public class Creador {
+	public static int galletas;
 	public static void main(String[] args){
 		try{
-			int ninios=0;
+			galletas=10;
+			int ninios=15;
 			BufferedReader sc=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Introduce la cantidad de ninios: ");
 			ninios=Integer.parseInt(sc.readLine());
-			Semaphore semaforo=new Semaphore(ninios);
-			Madre madre=new Madre(semaforo,ninios);
+			Semaphore semaforoninios=new Semaphore(1);
+			Semaphore semaforomadre=new Semaphore(0);
+			Madre madre=new Madre(semaforomadre,semaforoninios);
 			Ninio[] ninio=new Ninio[ninios];
+			madre.start();
 			for(int i=0;i<ninio.length;i++){
-				ninio[i]=new Ninio(semaforo, madre);
+				ninio[i]=new Ninio(semaforoninios,semaforomadre);
 			}
 			for(int i=0;i<ninio.length;i++){
 				ninio[i].start();
 			}
-			for(int i=0;i<ninio.length;i++){
-				ninio[i].join();
-			}
 		}catch(IOException e){
 			System.out.println("Excepcion IO");
-		}catch(InterruptedException e){
+		}catch(Exception e){
 			System.out.println("Excepcion interrupcion");
 		}
 	}
