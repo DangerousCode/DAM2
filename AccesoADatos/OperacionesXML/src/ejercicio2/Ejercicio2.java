@@ -1,6 +1,7 @@
 package ejercicio2;
 
 import java.util.List;
+import java.util.*;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -20,10 +21,13 @@ public class Ejercicio2 {
 			mueble.setText("muebles baratos");
 			persianas.setText("De colores");
 			
-			elementos.get(0).addContent(mueble);
-			elementos.get(0).addContent(persianas);
-			elementos.get(1).addContent(mueble);
-			elementos.get(1).addContent(persianas);
+			Iterator it= elementos.iterator();
+			
+			while(it.hasNext()){
+				Element e=(Element)it.next();
+				e.addContent(mueble);
+				e.addContent(persianas);
+			}
 			
 			new XMLOutputter().output(doc,System.out);
 			
