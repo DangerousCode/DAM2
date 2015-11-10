@@ -4,10 +4,37 @@ import java.util.concurrent.*;
 public class Creador {
 
 	public static void main(String args[]){
-		Semaphore sempaq=new Semaphore(6);
+		Semaphore sempaq=new Semaphore(100);
 		Robots[] robots=new Robots[6];
 		RobotPaquetes robotpaq=new RobotPaquetes(sempaq);
-		Cinta cinta=new Cinta(sempaq);
+		
+		for(int i=0;i<6;i++){
+			switch(i){
+			case 0:
+			case 1:
+				robots[i]=new Robots('L',i);
+				break;
+			
+			case 2:
+			case 3:
+				robots[i]=new Robots('N',i);
+				break;
+				
+			case 4:
+			case 5:
+				robots[i]=new Robots('I',i);
+				break;
+			}
+		}
+		
+		
+		Cinta.InicializarPaquetes();
+		
+		robotpaq.start();
+		
+		for(int i=0;i<6;i++){
+			robots[i].start();
+		}
 	}
 
 }
