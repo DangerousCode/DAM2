@@ -3,10 +3,10 @@ import java.util.concurrent.*;
 
 public class Creador {
 
-	public static void main(String args[]){
-		Semaphore sempaq=new Semaphore(100);
+	public static void main(String args[]) throws Exception{
+		Semaphore semcinta=new Semaphore(0);
 		Robots[] robots=new Robots[6];
-		RobotPaquetes robotpaq=new RobotPaquetes(sempaq);
+		RobotPaquetes robotpaq=new RobotPaquetes(semcinta);
 		
 		for(int i=0;i<6;i++){
 			switch(i){
@@ -28,13 +28,17 @@ public class Creador {
 		}
 		
 		
-		Cinta.InicializarPaquetes();
-		
+		Cinta.InicializarPaquetes(semcinta);
 		robotpaq.start();
 		
 		for(int i=0;i<6;i++){
 			robots[i].start();
 		}
+		for(int i=0;i<6;i++){
+			robots[i].join();
+		}
+		
+		robotpaq.join();
 	}
 
 }

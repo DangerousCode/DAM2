@@ -1,5 +1,4 @@
 package creador;
-
 public class Paquete {
 	char direccion;
 	int peso;

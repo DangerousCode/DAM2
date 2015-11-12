@@ -2,9 +2,9 @@ package creador;
 import java.util.concurrent.*;
 import java.util.*;
 public class RobotPaquetes extends Thread{
-	Semaphore sempaq;
-	RobotPaquetes(Semaphore sempaq){
-		this.sempaq=sempaq;
+	Semaphore semcinta;
+	RobotPaquetes(Semaphore semcinta){
+		this.semcinta=semcinta;
 	}
 	public void run(){
 		//Se crean dos random para el peso y la direccion.
@@ -14,7 +14,7 @@ public class RobotPaquetes extends Thread{
 			while(true){
 				for(int i=0;i<100;i++){
 					if(Cinta.paquetes[i]==null){
-						sempaq.acquire();
+						semcinta.acquire();
 						switch(randdireccion.nextInt(3)){
 						case 1:
 							Paquete paqueteL=new Paquete('L',randpeso.nextInt(100));
@@ -29,7 +29,7 @@ public class RobotPaquetes extends Thread{
 							Cinta.AniadirPaquete(paqueteI,i);
 							break;
 						}
-						sempaq.release();
+						semcinta.release();
 					}
 				}
 			}
