@@ -1,9 +1,11 @@
 package creador;
 
+
 public class Robots extends Thread {
 
 	char direccion;
 	int id;
+	Ventanas ventana=new Ventanas(""+id);
 
 	Robots(char direccion, int id) {
 		this.direccion = direccion;
@@ -13,34 +15,35 @@ public class Robots extends Thread {
 	public void run() {
 		int pesorecogido = 0;
 		while (true) {
-			for (int i = 0; i < 100; i++) {
-				System.out.println(direccion);
-				System.out.println(id);
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				if (Cinta.paquetes[i].getDireccion() == this.direccion) {
+			try {
+				Thread.sleep(500);
+				for (int i = 0; i < 20; i++) {
+					if (Cinta.paquetes[i].getDireccion() == this.direccion) {
+						Cinta.sempaq[i].acquire();
 
-					switch (direccion) {
-					case 'L':
-						System.out.println("Paquete con destino: Local");
-						break;
-					case 'N':
-						System.out.println("Paquete con destino: Nacional");
-						break;
-					case 'I':
-						System.out.println("Paquete con destino: Internacional");
-						break;
+						switch (direccion) {
+						case 'L':
+							ventana.escribecadena("Paquete con destino: Local\n");
+							break;
+						case 'N':
+							ventana.escribecadena("Paquete con destino: Nacional\n");
+							break;
+						case 'I':
+							ventana.escribecadena("Paquete con destino: Internacional\n");
+							break;
+						}
+
+						pesorecogido += Cinta.paquetes[i].peso;
+
+						ventana.escribecadena("El peso recogido por el robot " + id + " es: " + pesorecogido+"\n");
+						Cinta.BorrarPaquete(i);
+						Cinta.sempaq[i].release();
+						
 					}
-
-					pesorecogido += Cinta.paquetes[i].peso;
-
-					System.out.println("El peso recogido por el robot " + id + " es: " + pesorecogido);
-					
 				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 	}

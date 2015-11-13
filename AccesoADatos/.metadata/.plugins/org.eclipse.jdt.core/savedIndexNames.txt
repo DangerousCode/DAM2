@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+INDEX VERSION 1.127+C:\Users\AlumnoT\Documents\GitHub\DAM2\AccesoADatos\.metadata\.plugins\org.eclipse.jdt.core
+1628749190.index
+3602045245.index
+529896063.index
+3731379330.index
+217845429.index
+4097832164.index
+3532799207.index
+=======
 INDEX VERSION 1.127+C:\Users\Alvaro\Documents\GitHub\DAM2\AccesoADatos\.metadata\.plugins\org.eclipse.jdt.core
 1642629014.index
 2921179834.index
 4133831525.index
 322690031.index
+>>>>>>> origin/master
 3741726568.index
 1984797805.index
 4262030584.index

@@ -12,24 +12,22 @@ public class RobotPaquetes extends Thread{
 		Random randpeso=new Random();
 		try{
 			while(true){
-				for(int i=0;i<100;i++){
+				for(int i=0;i<20;i++){
 					if(Cinta.paquetes[i]==null){
-						semcinta.acquire();
 						switch(randdireccion.nextInt(3)){
 						case 1:
-							Paquete paqueteL=new Paquete('L',randpeso.nextInt(100));
+							Paquete paqueteL=new Paquete('L',randpeso.nextInt(1000));
 							Cinta.AniadirPaquete(paqueteL,i);
 							break;
 						case 2:
-							Paquete paqueteN=new Paquete('N',randpeso.nextInt(100));
+							Paquete paqueteN=new Paquete('N',randpeso.nextInt(1000));
 							Cinta.AniadirPaquete(paqueteN,i);
 							break;
 						case 3:
-							Paquete paqueteI=new Paquete('I',randpeso.nextInt(100));
+							Paquete paqueteI=new Paquete('I',randpeso.nextInt(1000));
 							Cinta.AniadirPaquete(paqueteI,i);
 							break;
 						}
-						semcinta.release();
 					}
 				}
 			}
