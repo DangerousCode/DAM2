@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.jdom2.output.XMLOutputter"/>
 <fullyQualifiedTypeName name="org.jdom2.xpath.XPathExpression"/>
 <fullyQualifiedTypeName name="org.jdom2.Element"/>
 <fullyQualifiedTypeName name="org.jdom2.filter.Filters"/>
@@ -13,6 +12,7 @@
 <fullyQualifiedTypeName name="org.jdom2.xpath.XPathFactory"/>
 <fullyQualifiedTypeName name="herramientas.Herramientas"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="org.jdom2.input.SAXBuilder"/>
 <fullyQualifiedTypeName name="org.jdom2.Document"/>
+<fullyQualifiedTypeName name="org.jdom2.input.SAXBuilder"/>
+<fullyQualifiedTypeName name="org.jdom2.output.XMLOutputter"/>
 </qualifiedTypeNameHistroy>
