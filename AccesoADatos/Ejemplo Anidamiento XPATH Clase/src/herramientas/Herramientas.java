@@ -156,7 +156,7 @@ public class Herramientas {
 	        	while(it.hasNext()){
 	        		Element at=(Element) it.next();
 	        		//SOUT de lo que queramos mostrar
-	        		//System.out.println(at.getName()+" "+at.getText()+" "+at.getAttributes());
+	        		//System.out.println(at.getAttributeValue("nacimiento"));
                                 XMLOutputter out=new XMLOutputter();
                                 out.output(at, System.out);
 	        	}
