@@ -1,21 +1,31 @@
 package creador;
 public class Paquete {
-	char direccion;
+	String direccion;
 	int peso;
+        int id;
 	Paquete(){
 		
 	}
-	Paquete(char direccion,int peso){
+	Paquete(int id,String direccion,int peso){
 		this.direccion=direccion;
 		this.peso=peso;
+                this.id=id;
 	}
-	public char getDireccion() {
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+	public String getDireccion() {
 		return direccion;
 	}
-	public void setDireccion(char direccion) {
+	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public float getPeso() {
+	public int getPeso() {
 		return peso;
 	}
 	public void setPeso(int peso) {

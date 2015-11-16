@@ -11,7 +11,7 @@ public class Ventanas {
 	Ventanas(String nombre){
 		ventana.setName(nombre);
 		ventana.setTitle(nombre);
-		ventana.setSize(400, 400);
+		ventana.setSize(500, 400);
 		ventana.setVisible(true);
 		ventana.add(texto_ventana);
 	}
