@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <personajes>
+        <personaje nombre="Teemo" rol="Dios de la muerte y destruccion" imagen="res/drawable/Tejon.jpg"></personaje>
+        <personaje nombre="Shyvana" rol="Luchador" imagen="res/drawable/Shyvana.jpg"></personaje>
+        <personaje nombre="Tryndamere" rol="Luchador" imagen="res/drawable/Trynda.jpg"></personaje>
+        <personaje nombre="Maestro Yi" rol="Asesino" imagen="res/drawable/Yi.jpg"></personaje>
+        <personaje nombre="Alistar" rol="Tanque" imagen="res/drawable/Alistar.jpg"></personaje>
+    </personajes>
