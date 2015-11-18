@@ -26,6 +26,7 @@ public class Robots extends Thread {
         ventana.escribecadena("\n\t\tSOY EL ROBOT " + id + "\n\tCOMENZANDO EJECUCION.\n\n");
         while (!salir) {
             try {
+                Thread.sleep(250);
                 idpaq = 0;
                 Cinta.semcinta.acquire();
                 for (int i = 0; i < Cinta.paquetes.length; i++) {

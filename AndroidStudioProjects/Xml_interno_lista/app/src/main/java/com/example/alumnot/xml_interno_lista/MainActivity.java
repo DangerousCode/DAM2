@@ -3,6 +3,7 @@ package com.example.alumnot.xml_interno_lista;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,9 +51,10 @@ public class MainActivity extends Activity{
                 String currentTagName = parser.getName();
                 if(currentTagName.equals("personaje")){
                     String nombreValue = parser.getAttributeValue(null,"nombre");
-                    String precioValue = parser.getAttributeValue(null,"rol");
+                    String rolValue = parser.getAttributeValue(null,"rol");
+                    Uri imagen = Uri.parse(parser.getAttributeValue(null,"imagen"));
 
-                    Personaje personajeActual = new Personaje(nombreValue, precioValue);
+                    Personaje personajeActual = new Personaje(nombreValue,rolValue, imagen);
 
                     listaPersonajes.add(personajeActual);
                     listaTitulos.add(nombreValue);
