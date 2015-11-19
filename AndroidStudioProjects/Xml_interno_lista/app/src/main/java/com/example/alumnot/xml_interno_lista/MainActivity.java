@@ -13,6 +13,7 @@ import android.widget.ListView;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -52,9 +53,10 @@ public class MainActivity extends Activity{
                 if(currentTagName.equals("personaje")){
                     String nombreValue = parser.getAttributeValue(null,"nombre");
                     String rolValue = parser.getAttributeValue(null,"rol");
-                    Uri imagen = Uri.parse(parser.getAttributeValue(null,"imagen"));
+                    String imagen = parser.getAttributeValue(null,"imagen");
+                    String historia=parser.getAttributeValue(null,"historia");
 
-                    Personaje personajeActual = new Personaje(nombreValue,rolValue, imagen);
+                    Personaje personajeActual = new Personaje(nombreValue,rolValue, imagen, historia);
 
                     listaPersonajes.add(personajeActual);
                     listaTitulos.add(nombreValue);

@@ -11,19 +11,25 @@ public class Personaje implements Serializable {
 
     private String nombre;
     private String rol;
-    private Uri imagen;
+    private String imagen;
+    private String historia;
 
-    public Personaje(String nombre, String rol, Uri imagen) {
+    public String getHistoria() {
+        return historia;
+    }
+
+    public Personaje(String nombre, String rol, String imagen, String historia) {
         this.nombre = nombre;
         this.rol = rol;
         this.imagen=imagen;
+        this.historia=historia;
     }
 
-    public Uri getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(Uri imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 

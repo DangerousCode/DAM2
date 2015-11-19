@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by AlumnoT on 03/11/2015.
@@ -16,10 +19,12 @@ public class DetalleActivity extends Activity {
         setContentView(R.layout.activity_detalle);
 
         ImageView campoImagen = (ImageView) findViewById(R.id.campoImagen);
-        Bitmap imagen = Bitmap.createScaledBitmap(ImageView.setImageUri)
+        TextView campoTexto = (TextView) findViewById(R.id.campoTexto);
         Bundle extras = getIntent().getExtras();
 
         Personaje personajeActual = (Personaje) extras.getSerializable("Personaje");
-        campoImagen.setImageBitmap();
+        campoTexto.setText(personajeActual.getHistoria());
+        int res_imagen=getResources().getIdentifier(personajeActual.getImagen(),"drawable",getPackageName());
+        campoImagen.setImageResource(res_imagen);
     }
 }

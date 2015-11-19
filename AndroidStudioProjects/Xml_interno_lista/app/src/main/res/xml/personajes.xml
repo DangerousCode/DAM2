@@ -1,8 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <personajes>
-        <personaje nombre="Teemo" rol="Dios de la muerte y destruccion" imagen="res/drawable/Tejon.jpg"></personaje>
-        <personaje nombre="Shyvana" rol="Luchador" imagen="res/drawable/Shyvana.jpg"></personaje>
-        <personaje nombre="Tryndamere" rol="Luchador" imagen="res/drawable/Trynda.jpg"></personaje>
-        <personaje nombre="Maestro Yi" rol="Asesino" imagen="res/drawable/Yi.jpg"></personaje>
-        <personaje nombre="Alistar" rol="Tanque" imagen="res/drawable/Alistar.jpg"></personaje>
+        <personaje nombre="Teemo" rol="Dios de la muerte y destruccion" imagen="tejon" historia="Teemo es una leyenda entre sus hermanos y
+            hermanas yordle de la ciudad de Bandle. Por lo que respecta a los yordles, parece que Teemo tiene algún pequeño problema.
+            Aunque disfruta de la compañía de otros yordles, también insiste con frecuencia en realizar misiones en solitario para la
+            defensa de la ciudad de Bandle. Pese a su personalidad cálida y amable, algo cambia en la mente de Teemo durante el combate,
+            dado que las vidas con las que acaba mientras está de patrulla no le importan en absoluto. Incluso cuando era un joven recluta,
+            los instructores y demás entrenadores encontraban desconcertante el hecho de que, aunque Teemo era por lo general encantador y
+            amable, se convertía en una máquina de matar muy eficaz en cuanto comenzaban los ejercicios de combate. Los superiores de Teemo
+            lo enviaron enseguida a los Exploradores de Mothership, una de las unidades especiales más distinguidas de la ciudad de Bandle,
+            junto con los Comandos Megling.
+
+            Aunque la mayoría de los yordles no son capaces de realizar misiones de exploración por sí solos con soltura, Teemo
+            es extremadamente eficaz. Su expediente de éxitos a la hora de defender a la ciudad de Bandle de los enemigos lo convierte
+            en uno de los yordles más peligrosos de la actualidad, aunque nunca lo dirías al tomar una copa con él en su taberna favorita.
+            La ciudad de Bandle eligió a Teemo como su primer campeón en la Liga, y él ha aceptado el papel encantado. Su arma tradicional
+            está impregnada con un veneno de ajunta que él mismo recoge en las junglas de Kumungu. Para sobrellevar sus largos períodos de
+            aislamiento, Teemo se ha hecho amigo recientemente de Tristana, también campeona de la Liga y miembro de las fuerzas especiales
+            de la ciudad de Bandle. Esta conexión es buena para ambos yordles, aunque ahora circulan rumores en la prensa de Valoran que
+            aseguran que su amistad está evolucionando en relación romántica. Pese a todo, Teemo es uno de los favoritos del público en la
+            Liga de Leyendas, y un enemigo de reducido tamaño que muchos han llegado a temer.
+
+            “Teemo se mueve en la delgada línea que separa al alegre compatriota del asesino sin remordimientos.
+             Pero sin duda es el mejor amigo que podría tener”.
+            -- Tristana">
+        </personaje>
+        <personaje nombre="Shyvana" rol="Luchador" imagen="shyvana" historia="Una mestiza nacida de la unión entre un dragón y un humano, Shyvana ha buscado su lugar durante toda la vida. La persecución la ha convertido en una guerrera brutal, y aquellos que osan hacer frente a Shyvana se enfrentan a la feroz bestia que acecha bajo su piel.
+
+            Los dragones consideraron la sangre impura de Shyvana una abominación, y se pasó toda su infancia siendo perseguida sin descanso por un malvado dragón. Siempre huyendo, ella y su padre, un dragón marginado, nunca conocieron un hogar de verdad. Con el reflejo de brutales e incontables batallas, Shyvana creció entre odio y violencia. Después de años de lucha, su padre pereció ante el otro dragón, no sin antes herir gravemente al enemigo. Furiosa por la pena, Shyvana persiguió al asesino de su padre que voló al norte para recuperarse. Allí, ella se encontró con un grupo de humanos que buscaban al mismo dragón. A pesar de que los hombres la observaban con miedo, el líder se acercó a Shyvana tranquilamente. Se presentó como Jarvan IV, príncipe de Demacia, y le ofreció ayuda a Shyvana para su venganza. Juntos cazaron y se enfrentaron al cruel dragón que había asesinado a su padre. Shyvana no esperaba que los hombres sobrevivieran, sin embargo, en el fragor de la batalla, Jarvan y sus hombres pelearon con una fuerza que ella misma nunca hubiera creído que tuvieran los humanos. Los acorazados guerreros consiguieron someter al enemigo, y fue Shyvana la que le dio el golpe de gracia, arrancándole el corazón a la bestia. Inspirado por su ferocidad, Jarvan le ofreció un puesto en su guardia de élite. Shyvana aún podía ver el terror en los ojos de los hombres, pero añoraba un verdadero hogar. Confió en la palabra de Jarvan y aceptó la oferta, sirviendo así como una guerrera demaciana. Aunque los aliados humanos admiran su poder, mantienen la distancia. Shyvana lucha con el poder del dragón de su interior para pagar la amabilidad del príncipe, pero no evita preguntarse si los humanos hacen bien en temerla.
+
+            ''He demostrado mi poder a los dragones, ¿qué desafío plantean los humanos?''
+            -- Shyvana">
+        </personaje>
+        <personaje nombre="Tryndamere" rol="Luchador" imagen="trynda" historia="Tryndamere avanza por la tundra empujado por su furia y rabia desatadas, domina el arte de la batalla y desafía a los más grandes guerreros de Freljord. Este bárbaro iracundo busca desesperadamente a quien diezmara a su clan, y acaba con todo aquel que se interponga entre él y su venganza final.
+
+            El joven Tryndamere intentaba sobrevivir en el duro y helador Freljord, y su gente combatía contra otras tribus por los escasos recursos que daba la tierra. En una de estas peleas, su vida cambió para siempre. Los incursores tendieron una emboscada a Tryndamere en el silencio de la noche, y aunque los guerreros pudieron repeler la primera oleada, no estaban listos para la figura oscura que apareció después. Blandía una espada cruel y viviente, e inspiraba ansias de sangre en los invasores con su magia de otro mundo. La tribu de Tryndamere fue superada en un momento. Tras perder la esperanza de derrotar a ese ser enigmático, Tryndamere se lanzó a una muerte segura. La figura oscura lo apartó a un lado e hirió mortalmente al joven bárbaro.
+
+            Tryndamere veía cómo la muerte y la destrucción se cebaban con su hogar al tiempo que veía cómo la vida se le escapaba de las manos. Nadie aguantó, sólo quedaban los gritos de los moribundos. Tryndamere era incapaz de rendirse y se entregó del todo a su ira. Su sangre hervía y la rabia le consumía, disipando su mortalidad. Se puso en pie, casi incapaz de sostener la espada, preparándose para el enfrentamiento final con ese ser sombrío. Pero la figura oscura ni siquiera alzó la espada, en vez de eso, sonrió familiarmente a Tryndamere mientras se desvanecía en las sombras. Fue la última vez que el bárbaro vio a su némesis.
+
+            Tryndamere, un hombre al que habían arrebatado su hogar y su gente, merodeó por Freljord durante años y juró convertirse en un instrumento de venganza brutal. Visitó todas las tribus de los páramos helados, y superó a todos sus campeones, hasta que no quedó ninguno al que desafiar. Durante este tiempo, dominó las artes marciales bárbaras y convirtió su rabia en una fuerza a tener en cuenta. Espada en mano e ira en corazón, está inmerso en una misión de venganza contra aquellos que destrozaron la vida que una vez conoció.
+
+            'La ira es mi arma''.
+            -- Tryndamere">
+            </personaje>
+        <personaje nombre="Maestro Yi" rol="Asesino" imagen="yi" historia=" A través del ancestral arte marcial del Wuju, el Maestro Yi ha moldeado su cuerpo y aguzado sus sentidos hasta que pensamiento y acción se volvieron la misma cosa. Aunque solo recurre a la violencia como último recurso, la gracia y la velocidad con las que empuña su espada le aseguran que el resultado siempre será satisfactorio. Como último practicante con vida del Wuju, el Maestro Yi ha dedicado toda su vida a buscar pupilos capaces de continuar con el legado de sus ancestros.
+
+            Ya mucho antes de dominar el Wuju, Yi estaba considerado como uno de los practicantes más habilidosos de este arte marcial místico. No tardaría en demostrar su habilidad cuando los rumores de una invasión noxiana llegaron a su aldea remota. Yi recorrió los campos de batalla de Jonia y fue capaz de cambiar las tornas de la guerra con veloces y letales ataques sobre la vasta infantería de Noxus, dejando en evidencia al Alto Mando Noxiano. Tras reconocer la amenaza que los discípulos del Wuju suponían para su invasión, los noxianos decidieron lanzar un temible ataque químico sobre el hogar de tan letal arte. Aquellos que lograron sobrevivir milagrosamente al veneno, acabaron con la mente destrozada y sin cura posible. Del hogar de Yi no quedaron más que simples ruinas.
+
+            Al acabar la guerra, Yi regresó a los grotescos restos de su aldea. Allí, se convertiría en la última baja del ataque. Con el espíritu destrozado, aunque no así el cuerpo, Yi se aferró a la única emoción que quedaba en su corazón: la venganza. Obsesionado con el deseo de castigar a quienes habían destrozado su hogar, Yi se pasó años entrenando en solitario. Se convirtió en un espadachín aún más letal de lo que ya era; pero aun así, el verdadero dominio del Wuju se le resistía.
+
+            En la cima de su frustración, su entrenamiento se vio interrumpido por un mono con unos modales inusualmente nobles. Erguido como un hombre, el mono observó e imitó los movimientos de Yi. Éste intentó espantarlo para que se fuese, pero la ágil criatura disfrutaba volviendo contra Yi sus propias técnicas. Con el tiempo, a medida que entrenaba con ese juguetón animal, Yi sintió cómo la ira remitía y, cuando se deshizo de la gran carga que era su odio, consiguió atrapar al mono por la cola. Fue entonces cuando Yi comprendió que nunca llegaría a dominar el Wuju mientras lo quisiese usar para la venganza, de modo que al soltar al mono también se desprendió de su deseo de hacer correr la sangre de su enemigo.
+
+            Yi agradeció al mono que le hubiese mostrado algo que se le escapaba y le sorprendió que la criatura le contestase. Deseaba aprender el arte marcial de Yi. Era una petición extraña, pero en ella Yi vio su nuevo camino: el modo de honrar la memoria de sus ancestros era transmitir sus enseñanzas a una nueva generación.
+
+            ''El filo de la hoja más afilada no es rival para la calma de una mente que está en paz''.
+            -- Maestro Yi">
+
+        </personaje>
+        <personaje nombre="Alistar" rol="Tanque" imagen="alistar" historia="Alistar es el guerrero más poderoso que haya emergido nunca de entre las tribus de minotauros de la Gran Barrera. Defendió a su tribu de los numerosos peligros de Valoran... hasta la llegada del ejército noxiano. Fue tentado a abandonar su pueblo por las maquinaciones de Keiran Darkwill, el hijo menor del general Boram Darkwill y comandante de la fuerza expedicionaria noxiana. Cuando Alistar regresó a casa encontró su pueblo en llamas y a su familia asesinada. Dominado por la furia, cargó contra todo un regimiento de la élite de Noxus y mató centenares de soldados. Sólo la intervención de algunos de los más diestros invocadores consiguió dominar su ira. Fue encadenado y conducido hasta Noxus, donde pasó los años siguientes como gladiador en La Carnaza, librando interminables combates para solaz de los ricos y poderosos.
+
+            El alma noble de Alistar fue deformándose lentamente, y habría llegado a perder todo rastro de cordura de no ser por Ayelia, una joven doncella que trabó amistad con él y consiguió organizar su huida. Una vez libre, Alistar se unió a la recién creada Liga de Leyendas como uno de sus campeones, con la esperanza de que llegara el día en que pudiera cobrarse venganza contra Noxus y encontrar a la chica que le devolvió la esperanza. Al principio, Alistar no quería mantener su estatus de celebridad como campeón, pero descubrió que la fama otorgaba poder y, desde entonces, se ha convertido en un defensor de aquellos que se vean amenazados por el gobierno noxiano. También se encarga de sacar a la luz casos que el ejército noxiano prefiere mantener ocultos; algo que lo ha convertido en persona non grata entre la nobleza de Noxus. Su trabajo caritativo le ha servido para ganar varios premios filantrópicos, que son un contraste interesante con respecto a la ira y destrucción que lleva consigo a la Liga de Leyendas.
+
+            Si, como invocador, quieres coger el toro por los cuernos, tal vez Alistar tenga algo que decir.">
+
+        </personaje>
     </personajes>
