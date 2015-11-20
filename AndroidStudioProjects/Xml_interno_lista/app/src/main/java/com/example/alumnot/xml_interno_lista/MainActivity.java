@@ -3,7 +3,6 @@ package com.example.alumnot.xml_interno_lista;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.XmlResourceParser;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,7 +12,6 @@ import android.widget.ListView;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
