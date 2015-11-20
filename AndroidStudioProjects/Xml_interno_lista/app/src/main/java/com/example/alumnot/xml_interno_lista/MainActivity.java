@@ -14,6 +14,8 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Created by AlumnoT on 05/11/2015.
@@ -21,7 +23,7 @@ import java.util.ArrayList;
 public class MainActivity extends Activity{
     private ArrayList<Personaje> listaPersonajes = new ArrayList<Personaje>();
     private ArrayList<String> listaTitulos = new ArrayList<String>();
-
+    private ArrayList<Personaje> listaPersonajesOrdenados=new ArrayList<Personaje>();
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -61,6 +63,16 @@ public class MainActivity extends Activity{
                 }
             }
         }
+
+        Collections.sort(listaTitulos);
+
+        for(int i=0;i<listaTitulos.size();i++){
+            for(int j=0;i<listaPersonajes.size();i++){
+                if(listaTitulos.get(i).equals(listaPersonajes.get(j).getNombre())){
+                    listaPersonajesOrdenados.add(listaPersonajes.get(j));
+                }
+            }
+        }
     }
 
     private void montarListView(){
@@ -74,7 +86,7 @@ public class MainActivity extends Activity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(MainActivity.this, DetalleActivity.class);
 
-                i.putExtra("Personaje", listaPersonajes.get(position));
+                i.putExtra("Personaje", listaPersonajesOrdenados.get(position));
                 startActivity(i);
             }
         });

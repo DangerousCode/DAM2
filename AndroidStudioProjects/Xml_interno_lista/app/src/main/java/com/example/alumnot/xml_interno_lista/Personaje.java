@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Created by AlumnoT on 03/11/2015.
  */
-public class Personaje implements Serializable {
+public class Personaje implements Serializable,Comparable<Personaje> {
 
     private String nombre;
     private String rol;
@@ -48,5 +48,16 @@ public class Personaje implements Serializable {
 
     public String getNombre() {
         return nombre;
+    }
+
+    @Override
+    public int compareTo(Personaje another) {
+        if(another.nombre.compareTo(nombre)==-1){
+            return -1;
+        }
+        if(another.nombre.compareTo(nombre)==1){
+            return 1;
+        }
+        return 0;
     }
 }
