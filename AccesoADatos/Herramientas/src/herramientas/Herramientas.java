@@ -172,5 +172,30 @@ public class Herramientas {
 			}
         }
         
+        public static void consultasXPATHAtributos(String ruta, String operacion,String atributo){
+        	SAXBuilder b=new SAXBuilder();
+        	Document doc;
+			try {
+				doc = b.build(new FileInputStream(ruta));
+				XPathExpression<Element> xpath=XPathFactory.instance().compile(operacion,Filters.element());
+	        	List<Element> elemento=xpath.evaluate(doc);
+	        	Iterator it=elemento.iterator();
+	        	while(it.hasNext()){
+	        		Element at=(Element) it.next();
+	        		//SOUT de lo que queramos mostrar
+	        		System.out.println(at.getAttributeValue(atributo));
+	        	}
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JDOMException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
+        
         
 }
