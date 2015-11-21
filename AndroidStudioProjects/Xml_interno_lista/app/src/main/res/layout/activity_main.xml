@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#28534f">
+    android:background="#0a113b">
 
     <ListView
         android:layout_width="match_parent"
@@ -13,5 +13,13 @@
         android:id="@+id/lista"
         android:textAlignment="center">
     </ListView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fondonashor"
+        android:adjustViewBounds="false" />
 
 </LinearLayout>
