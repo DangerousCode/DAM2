@@ -156,9 +156,9 @@ public class Herramientas {
 	        	while(it.hasNext()){
 	        		Element at=(Element) it.next();
 	        		//SOUT de lo que queramos mostrar
-	        		//System.out.println(at.getName()+" "+at.getText()+" "+at.getAttributes());
-                                XMLOutputter out=new XMLOutputter();
-                                out.output(at, System.out);
+	        		System.out.println("\n"+at.getName()+": "+at.getText());
+                                //XMLOutputter out=new XMLOutputter();
+                                //out.output(at, System.out);
 	        	}
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block

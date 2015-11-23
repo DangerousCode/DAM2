@@ -8,28 +8,57 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".DetalleActivity"
-    android:background="#0a113b">
+    android:background="#23425b">
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/campoImagen"
-        android:layout_marginTop="10dp"
-        android:maxHeight="200dp"
-        android:adjustViewBounds="true" />
+        android:id="@+id/campoNombre"
+        android:textColor="#ffffff"
+        android:background="#020722"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/campoRol"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:background="#000520"
+        android:layout_marginTop="16dp" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_marginTop="220dp">
+        android:layout_marginTop="75dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/campoTexto"
-            android:isScrollContainer="true"
-            android:textColor="#ffffff" />
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/campoImagen"
+                android:maxHeight="200dp"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/campoTexto"
+                android:isScrollContainer="true"
+                android:textColor="#ffffff"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="210dp"
+                android:gravity="center" />
+
+        </RelativeLayout>
     </ScrollView>
 
 </RelativeLayout>

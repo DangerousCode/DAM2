@@ -17,9 +17,13 @@ public class DetalleActivity extends Activity {
 
         ImageView campoImagen = (ImageView) findViewById(R.id.campoImagen);
         TextView campoTexto = (TextView) findViewById(R.id.campoTexto);
+        TextView campoRol=(TextView) findViewById(R.id.campoRol);
+        TextView campoNombre=(TextView) findViewById(R.id.campoNombre);
         Bundle extras = getIntent().getExtras();
 
         Personaje personajeActual = (Personaje) extras.getSerializable("Personaje");
+        campoNombre.setText(personajeActual.getNombre().toUpperCase());
+        campoRol.setText(personajeActual.getRol().toUpperCase());
 
         int res_imagen=getResources().getIdentifier(personajeActual.getImagen(),"drawable",getPackageName());
         campoImagen.setImageResource(res_imagen);
