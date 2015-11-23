@@ -58,7 +58,7 @@ public class MainActivity extends Activity{
                     Personaje personajeActual = new Personaje(nombreValue,rolValue, imagen, historia);
 
                     listaPersonajes.add(personajeActual);
-                    listaTitulos.add(nombreValue);
+                    listaTitulos.add(nombreValue.toUpperCase());
                 }
             }
         }
