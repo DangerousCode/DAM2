@@ -55,7 +55,7 @@ public class MainActivity extends Activity{
                     String imagen = parser.getAttributeValue(null,"imagen");
                     String historia=parser.getAttributeValue(null,"historia");
 
-                    Personaje personajeActual = new Personaje(nombreValue,rolValue, imagen, historia);
+                    Personaje personajeActual = new Personaje(nombreValue.toUpperCase(),rolValue, imagen, historia);
 
                     listaPersonajes.add(personajeActual);
                     listaTitulos.add(nombreValue.toUpperCase());

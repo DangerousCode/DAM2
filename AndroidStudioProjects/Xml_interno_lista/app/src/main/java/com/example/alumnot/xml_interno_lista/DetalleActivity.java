@@ -22,7 +22,7 @@ public class DetalleActivity extends Activity {
         Bundle extras = getIntent().getExtras();
 
         Personaje personajeActual = (Personaje) extras.getSerializable("Personaje");
-        campoNombre.setText(personajeActual.getNombre().toUpperCase());
+        campoNombre.setText(personajeActual.getNombre());
         campoRol.setText(personajeActual.getRol().toUpperCase());
 
         int res_imagen=getResources().getIdentifier(personajeActual.getImagen(),"drawable",getPackageName());
