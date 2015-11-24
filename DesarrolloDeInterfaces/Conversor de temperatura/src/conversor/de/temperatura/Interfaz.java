@@ -5,11 +5,16 @@
  */
 package conversor.de.temperatura;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author AlumnoT
  */
 public class Interfaz extends javax.swing.JFrame {
+
+    private double conversion;
+    private DecimalFormat decimal=new DecimalFormat("0.000");
 
     /**
      * Creates new form Interfaz
@@ -45,6 +50,7 @@ public class Interfaz extends javax.swing.JFrame {
         lKelvin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora de tiempo");
 
         campoTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campoTexto.setToolTipText("Introduzca la temperatura");
@@ -74,7 +80,6 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup2.add(cbCelsius);
         cbCelsius.setText("ºC");
         cbCelsius.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +87,6 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup2.add(cbFarenheit);
         cbFarenheit.setText("ºF");
         cbFarenheit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +94,6 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup2.add(cbKelvin);
         cbKelvin.setText("ºK");
         cbKelvin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,27 +155,82 @@ public class Interfaz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rbFarenheitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbFarenheitActionPerformed
-        cbFarenheit.setSelected(rootPaneCheckingEnabled);
+        cbFarenheit.setSelected(false);
+        lFarenheit.setText(" ");
+        cbCelsius.setSelected(false);
+        lCelsius.setText(" ");
+        cbKelvin.setSelected(false);
+        lKelvin.setText(" ");
     }//GEN-LAST:event_rbFarenheitActionPerformed
 
     private void rbCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCelsiusActionPerformed
-        cbCelsius.setSelected(rootPaneCheckingEnabled);
+        cbFarenheit.setSelected(false);
+        lFarenheit.setText(" ");
+        cbCelsius.setSelected(false);
+        lCelsius.setText(" ");
+        cbKelvin.setSelected(false);
+        lKelvin.setText(" ");
+        
     }//GEN-LAST:event_rbCelsiusActionPerformed
 
     private void rbKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbKelvinActionPerformed
-        cbKelvin.setSelected(rootPaneCheckingEnabled);
+        cbFarenheit.setSelected(false);
+        lFarenheit.setText(" ");
+        cbCelsius.setSelected(false);
+        lCelsius.setText(" ");
+        cbKelvin.setSelected(false);
+        lKelvin.setText(" ");
     }//GEN-LAST:event_rbKelvinActionPerformed
 
     private void cbCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCelsiusActionPerformed
-        lCelsius.setText(null);
+        if (rbCelsius.isSelected()){
+            lCelsius.setText(campoTexto.getText());
+        }
+        if (rbFarenheit.isSelected()) {
+            conversion = (Double.parseDouble(campoTexto.getText()) - 32) / 1.8;
+            lCelsius.setText(""+decimal.format(conversion));
+        }
+        if (rbKelvin.isSelected()) {
+            conversion = Double.parseDouble(campoTexto.getText()) - 273.15;
+            lCelsius.setText(""+decimal.format(conversion));
+        }
+        if (cbCelsius.isSelected()==false){
+            lCelsius.setText("");
+        }
     }//GEN-LAST:event_cbCelsiusActionPerformed
 
     private void cbFarenheitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbFarenheitActionPerformed
-        // TODO add your handling code here:
+        if (rbCelsius.isSelected()){
+            conversion=(Double.parseDouble(campoTexto.getText())*1.8)+32;
+            lFarenheit.setText(""+decimal.format(conversion));
+        }
+        if (rbFarenheit.isSelected()) {
+            lFarenheit.setText(campoTexto.getText());
+        }
+        if (rbKelvin.isSelected()) {
+            conversion = ((Double.parseDouble(campoTexto.getText()) - 273.15) *1.8 )+32;
+            lFarenheit.setText(""+decimal.format(conversion));
+        }
+        if (cbFarenheit.isSelected()==false){
+            lFarenheit.setText("");
+        }
     }//GEN-LAST:event_cbFarenheitActionPerformed
 
     private void cbKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKelvinActionPerformed
-        // TODO add your handling code here:
+        if (rbCelsius.isSelected()){
+            conversion = Double.parseDouble(campoTexto.getText()) + 273.15;
+            lKelvin.setText(""+decimal.format(conversion));
+        }
+        if (rbFarenheit.isSelected()) {
+            conversion = ((Double.parseDouble(campoTexto.getText()) - 32) / 1.8)+273.15;;
+            lKelvin.setText(""+decimal.format(conversion));
+        }
+        if (rbKelvin.isSelected()) {
+            lKelvin.setText(campoTexto.getText());
+        }
+        if (cbKelvin.isSelected()==false){
+            lKelvin.setText("");
+        }
     }//GEN-LAST:event_cbKelvinActionPerformed
 
     /**

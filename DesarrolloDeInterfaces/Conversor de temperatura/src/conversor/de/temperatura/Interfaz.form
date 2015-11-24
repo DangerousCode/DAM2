@@ -17,6 +17,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Calculadora de tiempo"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -138,9 +139,6 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="cbCelsius">
       <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup2"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="&#xba;C"/>
       </Properties>
       <Events>
@@ -149,9 +147,6 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="cbFarenheit">
       <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup2"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="&#xba;F"/>
       </Properties>
       <Events>
@@ -160,9 +155,6 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="cbKelvin">
       <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup2"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="&#xba;K"/>
       </Properties>
       <Events>
