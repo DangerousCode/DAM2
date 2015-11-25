@@ -23,7 +23,10 @@ public class MainActivity extends Activity{
     private ArrayList<Personaje> listaPersonajes = new ArrayList<Personaje>();
     private ArrayList<String> listaTitulos = new ArrayList<String>();
     private ArrayList<Personaje> listaPersonajesOrdenados=new ArrayList<Personaje>();
+<<<<<<< HEAD
     private ArrayList<String> listaCaracteristicas=new ArrayList<>();
+=======
+>>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -56,7 +59,11 @@ public class MainActivity extends Activity{
                     String imagen = parser.getAttributeValue(null,"imagen");
                     String historia=parser.getAttributeValue(null,"historia");
 
+<<<<<<< HEAD
                     Personaje personajeActual = new Personaje(nombreValue.toUpperCase(),rolValue, imagen, historia);
+=======
+                    Personaje personajeActual = new Personaje(nombreValue,rolValue, imagen, historia);
+>>>>>>> origin/master
 
                     listaPersonajes.add(personajeActual);
                     listaTitulos.add(nombreValue.toUpperCase());
