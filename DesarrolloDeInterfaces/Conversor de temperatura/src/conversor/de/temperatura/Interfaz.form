@@ -19,7 +19,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Conversor de temperatura"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="ff" green="66" red="66" type="rgb"/>
+      <Color blue="ff" green="33" red="66" type="rgb"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -43,36 +43,36 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                      <Component id="rbCelsius" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="rbFarenheit" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbKelvin" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="rbCelsius" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rbFarenheit" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rbKelvin" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cbCelsius" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="cbFarenheit" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="cbKelvin" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lCelsius" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lKelvin" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lFarenheit" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                      <Component id="campoTexto" min="-2" pref="116" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lGrados" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="cbFarenheit" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbKelvin" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbCelsius" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lCelsius" min="-2" pref="75" max="-2" attributes="0"/>
-                  <Component id="lFarenheit" min="-2" max="-2" attributes="0"/>
-                  <Component id="lKelvin" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="141" max="32767" attributes="0"/>
-              <Component id="campoTexto" min="-2" pref="116" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -80,26 +80,29 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-              <Component id="campoTexto" min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="campoTexto" pref="33" max="32767" attributes="0"/>
+                  <Component id="lGrados" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="rbCelsius" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbCelsius" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lCelsius" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="rbFarenheit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbCelsius" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbFarenheit" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lFarenheit" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="rbKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="78" max="32767" attributes="0"/>
+              <Component id="lCelsius" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lFarenheit" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lKelvin" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -168,14 +171,28 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbKelvinActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lCelsius">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lFarenheit">
+    <Component class="javax.swing.JTextField" name="lCelsius">
       <Properties>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lKelvin">
+    <Component class="javax.swing.JTextField" name="lFarenheit">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lKelvin">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lGrados">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="2"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

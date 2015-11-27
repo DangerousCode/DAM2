@@ -45,13 +45,14 @@ public class Interfaz extends javax.swing.JFrame {
         cbCelsius = new javax.swing.JCheckBox();
         cbFarenheit = new javax.swing.JCheckBox();
         cbKelvin = new javax.swing.JCheckBox();
-        lCelsius = new javax.swing.JLabel();
-        lFarenheit = new javax.swing.JLabel();
-        lKelvin = new javax.swing.JLabel();
+        lCelsius = new javax.swing.JTextField();
+        lFarenheit = new javax.swing.JTextField();
+        lKelvin = new javax.swing.JTextField();
+        lGrados = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Conversor de temperatura");
-        setBackground(new java.awt.Color(102, 102, 255));
+        setBackground(new java.awt.Color(102, 51, 255));
 
         campoTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campoTexto.setToolTipText("Introduzca la temperatura");
@@ -101,7 +102,16 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        lFarenheit.setToolTipText("");
+        lCelsius.setEditable(false);
+        lCelsius.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        lFarenheit.setEditable(false);
+        lFarenheit.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        lKelvin.setEditable(false);
+        lKelvin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        lGrados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,49 +121,53 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(rbCelsius))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbFarenheit, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rbKelvin, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(78, 78, 78)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbFarenheit)
-                    .addComponent(cbKelvin)
-                    .addComponent(cbCelsius))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lCelsius, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lFarenheit)
-                    .addComponent(lKelvin))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(141, Short.MAX_VALUE)
-                .addComponent(campoTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(140, 140, 140))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbCelsius)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbFarenheit)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbKelvin))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cbCelsius)
+                                .addGap(18, 18, 18)
+                                .addComponent(cbFarenheit)
+                                .addGap(18, 18, 18)
+                                .addComponent(cbKelvin))
+                            .addComponent(lCelsius)
+                            .addComponent(lKelvin)
+                            .addComponent(lFarenheit)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(campoTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(campoTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(campoTexto, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(lGrados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbCelsius)
-                    .addComponent(cbCelsius)
-                    .addComponent(lCelsius))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbFarenheit)
-                    .addComponent(cbFarenheit)
-                    .addComponent(lFarenheit))
-                .addGap(18, 18, 18)
+                    .addComponent(rbKelvin))
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbKelvin)
-                    .addComponent(cbKelvin)
-                    .addComponent(lKelvin))
-                .addContainerGap(78, Short.MAX_VALUE))
+                    .addComponent(cbCelsius)
+                    .addComponent(cbFarenheit)
+                    .addComponent(cbKelvin))
+                .addGap(18, 18, 18)
+                .addComponent(lCelsius, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lFarenheit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lKelvin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -167,8 +181,12 @@ public class Interfaz extends javax.swing.JFrame {
         cbKelvin.setSelected(false);
         lKelvin.setText(" ");
         cbFarenheit.setVisible(false);
+        lFarenheit.setVisible(false);
+        lCelsius.setVisible(rootPaneCheckingEnabled);
+        lKelvin.setVisible(rootPaneCheckingEnabled);
         cbCelsius.setVisible(rootPaneCheckingEnabled);
         cbKelvin.setVisible(rootPaneCheckingEnabled);
+        lGrados.setText("ºF");
     }//GEN-LAST:event_rbFarenheitActionPerformed
 
     private void rbCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCelsiusActionPerformed
@@ -180,7 +198,11 @@ public class Interfaz extends javax.swing.JFrame {
         lKelvin.setText(" ");
         cbFarenheit.setVisible(rootPaneCheckingEnabled);
         cbCelsius.setVisible(false);
+        lFarenheit.setVisible(rootPaneCheckingEnabled);
+        lCelsius.setVisible(false);
+        lKelvin.setVisible(rootPaneCheckingEnabled);
         cbKelvin.setVisible(rootPaneCheckingEnabled);
+        lGrados.setText("ºC");
     }//GEN-LAST:event_rbCelsiusActionPerformed
 
     private void rbKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbKelvinActionPerformed
@@ -193,6 +215,10 @@ public class Interfaz extends javax.swing.JFrame {
         cbFarenheit.setVisible(rootPaneCheckingEnabled);
         cbCelsius.setVisible(rootPaneCheckingEnabled);
         cbKelvin.setVisible(false);
+        lFarenheit.setVisible(rootPaneCheckingEnabled);
+        lCelsius.setVisible(rootPaneCheckingEnabled);
+        lKelvin.setVisible(false);
+        lGrados.setText("ºK");
     }//GEN-LAST:event_rbKelvinActionPerformed
 
     private void cbCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCelsiusActionPerformed
@@ -255,22 +281,7 @@ public class Interfaz extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+       
         //</editor-fold>
 
         /* Create and display the form */
@@ -292,9 +303,10 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JCheckBox cbCelsius;
     private javax.swing.JCheckBox cbFarenheit;
     private javax.swing.JCheckBox cbKelvin;
-    private javax.swing.JLabel lCelsius;
-    private javax.swing.JLabel lFarenheit;
-    private javax.swing.JLabel lKelvin;
+    private javax.swing.JTextField lCelsius;
+    private javax.swing.JTextField lFarenheit;
+    private javax.swing.JLabel lGrados;
+    private javax.swing.JTextField lKelvin;
     private javax.swing.JRadioButton rbCelsius;
     private javax.swing.JRadioButton rbFarenheit;
     private javax.swing.JRadioButton rbKelvin;
